@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+*.egg-info/
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Google Sheets credentials
+credentials.json
+client_secret.json
+token.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+!logs/.gitkeep
+
+# Data files
+data/
+*.json
+*.csv
+!data/.gitkeep
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Playwright
+playwright-report/
+test-results/
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+
+# Development log (keep for reference)
+!DEVELOPMENT.md
