@@ -5,8 +5,7 @@ import re
 from typing import List, Dict, Any, Optional
 from urllib.parse import urljoin
 
-from playwright.async_api import async_playwright, Page, Browser, BrowserContext
-from playwright._impl._api_types import TimeoutError as PlaywrightTimeoutError
+from playwright.async_api import async_playwright, Page, Browser, BrowserContext, TimeoutError as PlaywrightTimeoutError
 
 from ..utils.logger import get_logger, md_logger
 from ..utils.config import config
