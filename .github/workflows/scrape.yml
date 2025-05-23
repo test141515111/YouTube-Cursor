@@ -21,7 +21,7 @@ on:
       use_browserless:
         description: 'Browserlessを使用'
         required: false
-        default: true
+        default: false
         type: boolean
 
 jobs:
@@ -66,11 +66,8 @@ jobs:
         DEFAULT_SEARCH_QUERY: ${{ github.event.inputs.search_query || 'ChatGPT' }}
         MAX_RESULTS: ${{ github.event.inputs.max_results || '50' }}
       run: |
-        if [ "${{ github.event.inputs.use_browserless }}" == "true" ]; then
-          python main.py --query "$DEFAULT_SEARCH_QUERY" --max-results $MAX_RESULTS --use-browserless
-        else
-          python main.py --query "$DEFAULT_SEARCH_QUERY" --max-results $MAX_RESULTS
-        fi
+        # GitHub Actionsではローカルブラウザを使用（--use-browserlessフラグなし）
+        python main.py --query "$DEFAULT_SEARCH_QUERY" --max-results $MAX_RESULTS
     
     - name: Upload logs
       if: always()
